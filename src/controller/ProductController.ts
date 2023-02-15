@@ -11,7 +11,8 @@ export class ProductController {
     public getProducts = async (req: Request, res: Response) => {
         try {
             const input: GetProductsInput = {
-                q: req.query.q
+                q: req.query.q,
+                token: req.headers.authorization
             }
 
             const output = await this.productBusiness.getProducts(input)

@@ -1,7 +1,8 @@
 import { ProductModel } from "../types";
 
 export interface GetProductsInput {
-    q: unknown
+    q: unknown,
+    token: unknown
 }
 
 export type GetProductsOutput = ProductModel[]
